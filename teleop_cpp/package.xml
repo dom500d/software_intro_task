@@ -4,7 +4,7 @@
   <name>teleop_cpp</name>
   <version>1.0.0</version>
   <description>C++ Package containing code to convert joystick messages and add ESTOP capability</description>
-  <maintainer email="sisahawork@gmail.com">Siddharth Saha</maintainer>
+  <maintainer email="domvorlando@gmail.com">Dominic Orlando</maintainer>
   <license>Apache 2.0</license>
 
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
