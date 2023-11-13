@@ -13,17 +13,20 @@
 // limitations under the License.
 
 #include "teleop_cpp/teleop_cpp_node.hpp"
+#include "rclcpp/rclcpp.hpp"
 
 namespace triton_ai
 {
 namespace teleop_cpp
 {
 
-TeleopCppNode::TeleopCppNode(const rclcpp::NodeOptions & options)
-:  Node("teleop_cpp", options),
-  verbose(true)
-{
-  print_hello();
+class teleopCppNode : public rclpp::Node {
+  public:
+    teleopCppNode : Node("teleop_cpp_node") {
+      subscriber_ = this->create_subscription<std_msgs::msg::String>()
+    }
+}
+TeleopCppNode::TeleopCppNode(const rclcpp::NodeOptions & options):Node("teleop_cpp", options), verbose(true) {
 }
 
 int32_t TeleopCppNode::print_hello() const
